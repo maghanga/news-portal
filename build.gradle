@@ -3,7 +3,7 @@ plugins {
     id 'application'
 }
 
-group 'com.learn.jadle'
+group 'com.learn.news-portal'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
@@ -21,3 +21,6 @@ dependencies {
     compile group: 'org.postgresql', name: 'postgresql', version: '42.2.2'
     implementation 'com.google.code.gson:gson:2.8.6'
 }
+
+defaultTasks = ['clean']
+task stage(dependsOn: ['clean', 'installDist'])
