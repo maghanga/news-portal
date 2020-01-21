@@ -15,9 +15,6 @@ public interface UserDao {
     List<User> allUsers();
     List<News> myNews(int userId);
 
-    //update
-
-
     //delete
     void deleteById(int id);
     void deleteAll();

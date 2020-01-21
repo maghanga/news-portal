@@ -1,6 +1,8 @@
 package dao;
 
-import models.*;
+import models.Department;
+import models.News;
+import models.User;
 
 import java.util.List;
 
