@@ -16,6 +16,22 @@ public class User {
         this.department = department;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User users = (User) o;
+        return Objects.equals(name, users.name) &&
+                Objects.equals(position, users.position) &&
+                Objects.equals(role, users.role) &&
+                Objects.equals(department, users.department);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, position, role, department);
+    }
+
     public String getName() {
         return name;
     }
