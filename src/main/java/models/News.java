@@ -15,6 +15,22 @@ public class News {
         this.type = "General";
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        News news = (News) o;
+        return id == news.id &&
+                Objects.equals(title, news.title) &&
+                Objects.equals(description, news.description) &&
+                Objects.equals(type, news.type);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, description, type, id);
+    }
+
     public String getTitle() {
         return title;
     }
