@@ -12,19 +12,19 @@ public class DepartmentTest {
 //    @Rule
 //    public DatabaseRule databaseRule = new DatabaseRule();
 
-    private Department newDept(){
+    private Department newdepartment(){
         return new Department("Politics","We cover news and headlines on politics countrywide", 5);
     }
 
     @Test
     public void initializeCorrectly(){
-        Department department = newDept();
+        Department department = newdepartment();
         assertTrue(department instanceof Department);
     }
 
     @Test
     public void getMethodsWorkCorrectly(){
-        Department department = newDept();
+        Department department = newdepartment();
         assertEquals("Politics",department.getName());
         assertEquals("We cover news and headlines on politics countrywide",department.getDescription());
     }

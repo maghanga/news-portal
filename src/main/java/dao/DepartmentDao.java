@@ -10,7 +10,7 @@ public interface DepartmentDao {
 
     //create
     void add(Department department);
-    void addUserToDept(Department department,User user);
+    void addUserToDepartment(Department department,User user);
 
     //read
     Department findById(int id);
@@ -23,7 +23,7 @@ public interface DepartmentDao {
 
     //delete
     void deleteDepartmentById(int id);
-    void deleteEmployeeFromDept(Department department,User user);
-    void deleteDeptNewsById(int departmentId, int newsId);
+    void deleteEmployeeFromDepartment(Department department,User user);
+    void deleteDepartmentNewsById(int departmentId, int newsId);
     void deleteAll();
 }
