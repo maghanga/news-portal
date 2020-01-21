@@ -10,7 +10,7 @@ public class Sitemap {
         this.path = path;
     }
 
-    public String getDescr() {
+    public String getDescribe() {
         return describe;
     }
 

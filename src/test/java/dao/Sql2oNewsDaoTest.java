@@ -3,7 +3,6 @@ package dao;
 import models.Department;
 import models.News;
 import models.User;
-import org.junit.Rule;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -14,8 +13,8 @@ public class Sql2oNewsDaoTest {
     private static Sql2oNewsDao newsDao = new Sql2oNewsDao();
     private static Sql2oUserDao userDao = new Sql2oUserDao();
 
-    @Rule
-    public DatabaseRule databaseRule = new DatabaseRule();
+//    @Rule
+//    public DatabaseRule databaseRule = new DatabaseRule();
 
     private News altNews(){
         News news = new News("Attempted murder","Babu Owino shoots a DJ at BClub");
@@ -57,9 +56,7 @@ public class Sql2oNewsDaoTest {
 
     @Test
     public void findNewsById(){
-        News news = altNews();//    @Rule
-//    public DatabaseRule databaseRule = new DatabaseRule();
-
+        News news = altNews();
         News news2 = altNews2();
         assertTrue(news.equals(newsDao.findById(news.getId())));
     }
