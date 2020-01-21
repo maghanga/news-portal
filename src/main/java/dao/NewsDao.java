@@ -16,8 +16,6 @@ public interface NewsDao {
     List<News> allGeneralNews();
     List<News> allDepartmentNews();
 
-    //update
-
     //delete
     void deleteById(int id);
     void deleteAll();
