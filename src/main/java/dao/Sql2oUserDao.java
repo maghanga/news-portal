@@ -8,13 +8,12 @@ import org.sql2o.Sql2oException;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Sql2oUserDao implements UserDao {
     public Sql2oUserDao(){}
 
     @Override
     public void add(User user) {
-        String sql = "INSERT INTO users (name, position, role, department) VALUES (:name, :position, :role, :department);";
+        String sql = "INSERT INTO users (name,position,role,department) VALUES (:name,:position,:role,:department);";
         try (Connection con = DB.sql2o.open()) {
             int id = (int) con.createQuery(sql,true)
                     .bind(user)
@@ -22,7 +21,7 @@ public class Sql2oUserDao implements UserDao {
                     .getKey();
             user.setId(id);
         } catch (Sql2oException ex){
-            System.out.println("No user added: " + ex);
+            System.out.println("User is not added: "+ex);
         }
     }
 
@@ -47,7 +46,7 @@ public class Sql2oUserDao implements UserDao {
 
     @Override
     public void deleteById(int id) {
-        String sql = "DELETE from users where id = :id;";
+        String sql = "DELETE FROM users WHERE id = :id;";
         try (Connection con = DB.sql2o.open()) {
             con.createQuery(sql)
                     .addParameter("id",id)
@@ -57,7 +56,7 @@ public class Sql2oUserDao implements UserDao {
 
     @Override
     public void deleteAll() {
-        String sql = "DELETE from users;";
+        String sql = "DELETE FROM users;";
         try (Connection con = DB.sql2o.open()) {
             con.createQuery(sql)
                     .executeUpdate();
