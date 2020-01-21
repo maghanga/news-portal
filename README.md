@@ -1,5 +1,5 @@
 # News-Portal
-News Portal is A EST API for querying and retrieving scoped news and information.  
+News Portal is A REST API for querying and retrieving scoped news and information. A user can create an article and house it within a department or otherwise desirably
 
 ## Author
 [Nehru O'neil](https://github.com/thinknehru)
