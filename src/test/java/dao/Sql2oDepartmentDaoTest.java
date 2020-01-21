@@ -2,6 +2,7 @@ package dao;
 
 import models.Department;
 import models.User;
+import org.junit.Rule;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -11,8 +12,8 @@ public class Sql2oDepartmentDaoTest {
     private Sql2oDepartmentDao departmentDao = new Sql2oDepartmentDao();
     private static Sql2oUserDao userDao = new Sql2oUserDao();
 
-//    @Rule
-//    public DatabaseRule databaseRule = new DatabaseRule();
+    @Rule
+    public DatabaseRule databaseRule = new DatabaseRule();
 
     private Department newDepartment(){
         Department department = new Department("Forensics","Research and determine cause of murders", 5);

@@ -1,6 +1,7 @@
 package dao;
 
 import models.User;
+import org.junit.Rule;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -9,8 +10,8 @@ import static org.junit.Assert.*;
 public class Sql2oUserDaoTest {
     private static Sql2oUserDao userDao = new Sql2oUserDao();
 
-//    @Rule
-//    public DatabaseRule databaseRule = new DatabaseRule();
+    @Rule
+    public DatabaseRule databaseRule = new DatabaseRule();
 
     private User newUser(){
         User user = new User("Dr. Whoever","Lead","Reporter","Forensics");
