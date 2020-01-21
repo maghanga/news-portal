@@ -35,15 +35,15 @@ CREATE TABLE news(id SERIAL PRIMARY KEY, title VARCHAR, description VARCHAR, typ
 ```
 
 ## Usage
-Afer cloning the repository and changing to the directory run the following commands to launch the app
+After cloning the repository and changing to the directory run the following commands to launch the app
 showing your spark server
 ```bash
 gradle build
 gradle run
 ```
 In the terminal locate the url showing your spark server
-You can navigate to [http://localhost:4567/](http://localhost:4567/) as it works with most spark appications
-You can the add the animal which thereafter you can add to endangered animals
+You can navigate to, for example [http://localhost:4567/departments](http://localhost:4567/departments)
+You can the add whichever route  you want for the desired page
 
 ## Technologies used
 In the following app we used the following technologies
